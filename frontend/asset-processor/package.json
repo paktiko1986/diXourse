@@ -10,7 +10,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@babel/core": "^7.28.5",
+    "@babel/core": "^7.29.6",
     "@babel/preset-env": "^7.28.5",
     "@babel/standalone": "^7.28.5",
     "@csstools/postcss-light-dark-function": "^2.0.11",
