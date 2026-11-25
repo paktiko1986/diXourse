@@ -95,7 +95,9 @@ class Reviewable < ActiveRecord::Base
   end
 
   def self.valid_type?(type)
-    type.to_s.safe_constantize.in?(types)
+    type_name = type.to_s
+    allowed_type_names = types.flat_map { |klass| [klass.name, klass.sti_name] }
+    allowed_type_names.include?(type_name)
   end
 
   def self.valid_filter_type?(type)
